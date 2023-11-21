@@ -51,7 +51,7 @@ Download the SAYOLO Network Weights and place them in the "model_data" folder.
 
 **SAYOLO Network Weights**:
 
-Link: https://pan.baidu.com/s/1xu-TkFKaDyfVU6-sars9vQ?pwd=Lisa Password: Lisa
+Link: https://pan.baidu.com/s/1xu-TkFKaDyfVU6-sars9vQ?pwd=Lisa
 
 ### Detection
 
@@ -65,7 +65,7 @@ Download the Complex Mini VOC Dataset and place them in the "ISA-Ingenious-Siame
 
 **Complex Mini VOC Dataset**:
 
-Link: https://pan.baidu.com/s/1sxbn3gvr0pdES-dURVro6g?pwd=Lisa Password: Lisa
+Link: https://pan.baidu.com/s/1sxbn3gvr0pdES-dURVro6g?pwd=Lisa
 
 ### Train
 
