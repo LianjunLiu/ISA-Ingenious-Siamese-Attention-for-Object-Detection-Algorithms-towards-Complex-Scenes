@@ -73,7 +73,7 @@ Link: https://pan.baidu.com/s/1sxbn3gvr0pdES-dURVro6g?pwd=Lisa Password: Lisa
 python train.py
 ```
 
-## Paper content correction
+## Paper Content Correction
 
 
 
