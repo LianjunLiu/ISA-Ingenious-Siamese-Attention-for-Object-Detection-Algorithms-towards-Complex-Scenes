@@ -75,6 +75,7 @@ python train.py
 
 ## Paper Content Correction
 
+The "CBAB" in the third row and fifth column of Table 5 should be "CBAM".
 
 
 ## Acknowledgement
