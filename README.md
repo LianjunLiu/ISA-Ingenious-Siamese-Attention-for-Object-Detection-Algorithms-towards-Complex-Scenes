@@ -5,7 +5,7 @@ This is the official repository for paper "ISA: Ingenious Siamese Attention for 
 ---
 
 Our paper has been accepted by ***ISA Transactions***.
-https://www.sciencedirect.com/science/article/abs/pii/S0019057823004007
+Link: https://www.sciencedirect.com/science/article/abs/pii/S0019057823004007
 
 
 A Chinese translation of our paper has been published on ***Zhihu***.
