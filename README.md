@@ -7,6 +7,7 @@ This is the official repository for paper "ISA: Ingenious Siamese Attention for 
 Our paper has been accepted by ***ISA Transactions***.
 https://www.sciencedirect.com/science/article/abs/pii/S0019057823004007
 
+
 A Chinese translation of our paper has been published on ***Zhihu***.
 Link: https://zhuanlan.zhihu.com/p/659753274
 
@@ -19,21 +20,21 @@ The interference of complex environments on object detection tasks dramatically 
 
 ### Overall Network Structure
 
-![](.\assets\SiameseAttentionYOLO-eps-converted-to_00.png)
+![](./assets/SiameseAttentionYOLO-eps-converted-to_00.png)
 
 ### Attention Neck YOLOv4 (ANYOLOv4)
 
-![](.\assets\\AttentionNeckYOLO-eps-converted-to_00.png)
+![](./assets/AttentionNeckYOLO-eps-converted-to_00.png)
 
 ### Special Designed Network Scoring Module
 
-![](.\assets\NetworkScoringModule-eps-converted-to_00.png)
+![](./assets/NetworkScoringModule-eps-converted-to_00.png)
 
 ### Detection Results Under Real Limit Conditions
 
-![](.\assets\ComparewithSOTAAlgorithms2-eps-converted-to_00.png)
+![](./assets/ComparewithSOTAAlgorithms2-eps-converted-to_00.png)
 
-![](.\assets\ComparewithSOTAAlgorithms1-eps-converted-to_00.png)
+![](./assets/ComparewithSOTAAlgorithms1-eps-converted-to_00.png)
 
 ## Usage
 
