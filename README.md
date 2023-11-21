@@ -76,7 +76,7 @@ python train.py
 ## Paper Content Correction
 
 - The "CBAB" in the third row and fifth column of Table 5 should be "CBAM".
-- The formulas (10), (11) and (12) cited in the text shall be (13), (14) and (15), respectively.
+- On page 8, the formulas (10), (11) and (12) cited in the text should be (13), (14) and (15), respectively.
 
 ## Acknowledgement
 
