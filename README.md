@@ -47,7 +47,7 @@ pip install -r requirements.txt
 
 ### Weights
 
-Download the SAYOLO Network Weights and place them in the "model_data" folder.
+Download the SAYOLO Network Weights and place them (file: best_epoch_weights.pth; file: CSPdarknet53_backbone_weights.pth; file: yolo4_voc_weights.pth) in the "model_data" folder.
 
 **SAYOLO Network Weights**:
 
@@ -61,7 +61,7 @@ python predict.py
 
 ### Dataset
 
-Download the Complex Mini VOC Dataset and place them in the "ISA-Ingenious-Siamese-Attention-for-Object-Detection-Algorithms-towards-Complex-Scenes" folder.
+Download the Complex Mini VOC Dataset and place them (folder: VOCdevkit; file: 2007_train.txt; file: 2007_val.txt) in the "ISA-Ingenious-Siamese-Attention-for-Object-Detection-Algorithms-towards-Complex-Scenes" folder.
 
 **Complex Mini VOC Dataset**:
 
