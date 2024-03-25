@@ -55,6 +55,17 @@ Link: https://pan.baidu.com/s/1xu-TkFKaDyfVU6-sars9vQ?pwd=Lisa
 
 ### Detection
 
+First, you should select the weights both for the YOLOv4 and ANYOLOv4 subnetwork in file 'yolo.py'.
+
+```python
+# "model_path" is the weight path of the YOLOv4 subnetwork.
+"model_path": 'model_data/yolo4_voc_weights.pth'
+# "model_path" is the weight path of the ANYOLOv4 subnetwork.
+"model_path_attention": 'model_data/best_epoch_weights.pth'
+```
+
+Then you can detect the images through the following command.
+
 ```python
 python predict.py
 ```
@@ -63,11 +74,64 @@ python predict.py
 
 Download the Complex Mini VOC Dataset and place them (folder: VOCdevkit; file: 2007_train.txt; file: 2007_val.txt) in the "ISA-Ingenious-Siamese-Attention-for-Object-Detection-Algorithms-towards-Complex-Scenes" folder.
 
-**Complex Mini VOC Dataset**:
+#### **Complex Mini VOC Dataset**:
 
 Link: https://pan.baidu.com/s/1sxbn3gvr0pdES-dURVro6g?pwd=Lisa
 
+#### **Private Dataset**:
+
+**File Structure:**
+
+#--VOCdevkit
+|	#--VOC2007
+|	|	#--Annotations
+|	|	|	#--000001.xml
+|	|	|	#--000002.xml
+|	|	|	#--000003.xml
+|	|	|	...
+|	|	#--ImageSets
+|	|	|	#--Main
+|	|	|	|	#--test.txt
+|	|	|	|	#--train.txt
+|	|	|	|	#--trainval.txt
+|	|	|	|	#--val.txt
+|	|	#--JPEGImages
+|	|	|	#--000001.jpg
+|	|	|	#--000002.jpg
+|	|	|	#--000003.jpg
+|	|	|	...
+
+After making the dataset, place them (folder: VOCdevkit) in the "ISA-Ingenious-Siamese-Attention-for-Object-Detection-Algorithms-towards-Complex-Scenes" folder.
+
+**Modify Detection Objects:**
+
+Modify tetection objects in 'voc_classes.txt' (in folder 'model_data').
+
+**Generate ‘xxx.txt’ Files:**
+
+```python
+python voc_annotation.py
+```
+
 ### Train
+
+Select the subnetwork branch (YOLOv4 or ANYOLOv4) to train in the file 'train.py'：
+
+```python
+# YOLOv4 Branch
+YOLOv4_Branch   = 'YOLOv4'
+# ANYOLOv4 Branch
+YOLOv4_Branch   = 'ANYOLOv4'
+```
+
+Modify the pre-training weight path in the file 'train.py'：
+
+```python
+# Cause you are training a new network, there is no appropriate weight for it, so the weight is none. Therefore, the value of parameter 'model_path' is ''.
+model_path      = ''
+```
+
+Now you can train the subnetwork through the following command.
 
 ```python
 python train.py
