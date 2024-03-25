@@ -13,7 +13,7 @@ import torch.optim as optim
 from torch import nn
 from torch.utils.data import DataLoader
 
-# from nets.yolo import YoloBody
+from nets.yolo import YoloBody
 from nets.yolo_attention import YoloBody_Attention
 from nets.yolo_training import (YOLOLoss, get_lr_scheduler, set_optimizer_lr,
                                 weights_init)
@@ -66,6 +66,12 @@ if __name__ == "__main__":
     #               可减少约一半的显存、需要pytorch1.7.1以上
     #---------------------------------------------------------------------#
     fp16            = False
+    # ---------------------------------------------------------------------#
+    #   YOLOv4_Branch   选择要训练的子网络分支
+    #                   YOLOv4_Branch = 'YOLOv4'  训练YOLOv4子网络
+    #                   YOLOv4_Branch = 'ANYOLOv4'  训练ANYOLOv4子网络
+    # ---------------------------------------------------------------------#
+    YOLOv4_Branch   = 'YOLOv4'
     #---------------------------------------------------------------------#
     #   classes_path    指向model_data下的txt，与自己训练的数据集相关 
     #                   训练前一定要修改classes_path，使其对应自己的数据集
@@ -292,8 +298,10 @@ if __name__ == "__main__":
     #------------------------------------------------------#
     #   创建yolo模型
     #------------------------------------------------------#
-    # model = YoloBody(anchors_mask, num_classes, pretrained=pretrained)
-    model = YoloBody_Attention(anchors_mask, num_classes, pretrained = pretrained)
+    if YOLOv4_Branch == 'YOLOv4':
+        model = YoloBody(anchors_mask, num_classes, pretrained=pretrained)
+    if YOLOv4_Branch == 'ANYOLOv4':
+        model = YoloBody_Attention(anchors_mask, num_classes, pretrained = pretrained)
     if not pretrained:
         weights_init(model)
     if model_path != '':
@@ -550,7 +558,7 @@ if __name__ == "__main__":
 
             set_optimizer_lr(optimizer, lr_scheduler_func, epoch)
 
-            fit_one_epoch(model_train, model, yolo_loss, loss_history, eval_callback, optimizer, epoch, epoch_step, epoch_step_val, gen, gen_val, UnFreeze_Epoch, Cuda, fp16, scaler, save_period, save_dir, local_rank)
+            fit_one_epoch(YOLOv4_Branch, model_train, model, yolo_loss, loss_history, eval_callback, optimizer, epoch, epoch_step, epoch_step_val, gen, gen_val, UnFreeze_Epoch, Cuda, fp16, scaler, save_period, save_dir, local_rank)
                         
             if distributed:
                 dist.barrier()
