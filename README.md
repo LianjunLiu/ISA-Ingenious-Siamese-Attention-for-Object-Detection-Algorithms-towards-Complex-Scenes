@@ -60,7 +60,7 @@ First, you should select the weights both for the YOLOv4 and ANYOLOv4 subnetwork
 ```python
 # "model_path" is the weight path of the YOLOv4 subnetwork.
 "model_path": 'model_data/yolo4_voc_weights.pth'
-# "model_path" is the weight path of the ANYOLOv4 subnetwork.
+# "model_path_attention" is the weight path of the ANYOLOv4 subnetwork.
 "model_path_attention": 'model_data/best_epoch_weights.pth'
 ```
 
