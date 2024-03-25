@@ -55,7 +55,7 @@ Link: https://pan.baidu.com/s/1xu-TkFKaDyfVU6-sars9vQ?pwd=Lisa
 
 ### Detection
 
-First, you should select the weights both for the YOLOv4 and ANYOLOv4 subnetwork in file 'yolo.py'.
+First, you should select the weights both for the YOLOv4 and ANYOLOv4 subnetwork in the file "yolo.py".
 
 ```python
 # "model_path" is the weight path of the YOLOv4 subnetwork.
@@ -107,7 +107,7 @@ After making the dataset, place them (folder: VOCdevkit) in the "ISA-Ingenious-S
 
 **Modify Detection Objects:**
 
-Modify tetection objects in 'voc_classes.txt' (in folder 'model_data').
+Modify detection objects in "voc_classes.txt" (in folder "model_data").
 
 **Generate ‘xxx.txt’ Files:**
 
@@ -117,7 +117,7 @@ python voc_annotation.py
 
 ### Train
 
-Select the subnetwork branch (YOLOv4 or ANYOLOv4) to train in the file 'train.py'：
+Select the subnetwork branch (YOLOv4 or ANYOLOv4) to train in the file "train.py"：
 
 ```python
 # YOLOv4 Branch
@@ -126,10 +126,10 @@ YOLOv4_Branch   = 'YOLOv4'
 YOLOv4_Branch   = 'ANYOLOv4'
 ```
 
-Modify the pre-training weight path in the file 'train.py'：
+Modify the pre-training weight path in the file "train.py"：
 
 ```python
-# Cause you are training a new network, there is no appropriate weight for it, so the weight is none. Therefore, the value of parameter 'model_path' is ''.
+# Cause you are training a new network, there is no appropriate weight for it, so the weight is none. Therefore, the value of parameter "model_path" is ''.
 model_path      = ''
 ```
 
