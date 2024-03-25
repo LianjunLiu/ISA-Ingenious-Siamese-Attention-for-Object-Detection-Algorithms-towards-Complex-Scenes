@@ -109,7 +109,7 @@ After making the dataset, place them (folder: VOCdevkit) in the "ISA-Ingenious-S
 
 Modify detection objects in "voc_classes.txt" (in folder "model_data").
 
-**Generate ‘xxx.txt’ Files:**
+**Generate "xxx.txt" Files:**
 
 ```python
 python voc_annotation.py
