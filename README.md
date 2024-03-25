@@ -83,22 +83,39 @@ Link: https://pan.baidu.com/s/1sxbn3gvr0pdES-dURVro6g?pwd=Lisa
 **File Structure:**
 
 #--VOCdevkit
+
 |	#--VOC2007
+
 |	|	#--Annotations
+
 |	|	|	#--000001.xml
+
 |	|	|	#--000002.xml
+
 |	|	|	#--000003.xml
+
 |	|	|	...
+
 |	|	#--ImageSets
+
 |	|	|	#--Main
+
 |	|	|	|	#--test.txt
+
 |	|	|	|	#--train.txt
+
 |	|	|	|	#--trainval.txt
+
 |	|	|	|	#--val.txt
+
 |	|	#--JPEGImages
+
 |	|	|	#--000001.jpg
+
 |	|	|	#--000002.jpg
+
 |	|	|	#--000003.jpg
+
 |	|	|	...
 
 After making the dataset, place them (folder: VOCdevkit) in the "ISA-Ingenious-Siamese-Attention-for-Object-Detection-Algorithms-towards-Complex-Scenes" folder.
